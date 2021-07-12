@@ -61,4 +61,8 @@ Below is the current Entity Relationship Diagram I have developed. This will get
 
 ![image](https://user-images.githubusercontent.com/86304577/125354099-4db26c80-e35b-11eb-9967-cdc37264dc60.png)
 
+A one-to-many relationship was used for this application solely due to the fact that this is what is required for application. 
+
+
+
 
