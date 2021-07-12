@@ -50,4 +50,8 @@ The CRUD for this application is outlined below:
 Below I have created a risk assessment which outlines the various risks with the application development and the application itself alongside the potential fixes.
 ![image](https://user-images.githubusercontent.com/86304577/125350545-c82cbd80-e356-11eb-9cd5-d108fb3dcdfb.png)
 
+### JIRA BOARD:
+Below is how I have documented my progress of the project using JIRA. This application was used as it was the one that I am well-versed in and it is fairly easy to use.
+![image](https://user-images.githubusercontent.com/86304577/125352928-cb757880-e359-11eb-81d3-accfee9353c1.png)
+
 
