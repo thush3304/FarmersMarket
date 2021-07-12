@@ -54,5 +54,11 @@ Below I have created a risk assessment which outlines the various risks with the
 Below is how I have documented my progress of the project using JIRA. This application was used as it was the one that I am well-versed in and it is fairly easy to use.
 
 ![image](https://user-images.githubusercontent.com/86304577/125352928-cb757880-e359-11eb-81d3-accfee9353c1.png)
+This board will get updated and the full board can be accessed at: https://thushithqa.atlassian.net/jira/software/projects/FM/boards/2/roadmap
+
+### Entity Relationship Diagram:
+Below is the current Entity Relationship Diagram I have developed. This will get developed as more sections are added onto the project, however for now as shown it satisfies the aim of a one-to-many relationship database. 
+
+![image](https://user-images.githubusercontent.com/86304577/125354099-4db26c80-e35b-11eb-9967-cdc37264dc60.png)
 
 
