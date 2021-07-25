@@ -2,11 +2,12 @@ from flask import redirect, url_for, request, render_template
 from . import app
 from . import db
 from .models import Farmers, Goods
-from .farms import Farmfarm
+from .forms import Farmform
 #Defaults both tables on default application route and home route shows Read route
 @app.route('/')
 @app.route('/home')
 def home():
+
     farmers = Farmers.query.all()
     good = Goods.query.all()
     return render_template('home.html', farmers=farmers, good=good)
@@ -14,7 +15,7 @@ def home():
 #Route for adding new entries to table
 @app.route("/create", methods=['GET', 'POST']) 
 def create():
-    new = Farmfarm()
+    new = Farmform()
     if request.method == 'POST':
         new_farmer = Farmers(
             name = new.name.data,
