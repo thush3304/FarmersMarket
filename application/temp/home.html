@@ -42,7 +42,7 @@
                     {% for entry in good %} 
                         <!--Only displays goods with the same id as farmer-->
                         {% if entry.farmers_id == row.id %}
-                            {{entry.equipment.upper()}}
+                            {{entry.equipment.upp()}}
                             {{entry.equipmenttype.upper()}}
                             {{entry.vegetables.upper()}}
                             {{entry.vegenum}}
