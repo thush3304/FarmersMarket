@@ -1,13 +1,13 @@
 from . import db
 
-class Farmers:
+class Farmers(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(30), unique = True, nullable = False)
-    Farm = db.Column(db.String(30), unique = True, nullable = False)
+    farm = db.Column(db.String(30), unique = True, nullable = False)
     age = db.Column(db.Integer)
     good = db.relationship('Goods', backref='farmers', lazy=True)
 
-class Goods:
+class Goods(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     equipment = db.Column(db.String(30), nullable = False)
     equipmenttype = db.Column(db.String(30), nullable = False)
