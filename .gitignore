@@ -140,3 +140,11 @@ cython_debug/
 #extra
 *.db
 .env
+.pytest_cache
+venv
+**/__pycache__
+application/__init__.py
+.coverage
+application/data.db
+application/test.db
+.getenv

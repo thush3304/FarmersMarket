@@ -5,9 +5,7 @@ from .models import Farmers, Goods
 from .forms import Farmform
 #Defaults both tables on default application route and home route shows Read route
 @app.route('/')
-@app.route('/home')
 def home():
-
     farmers = Farmers.query.all()
     good = Goods.query.all()
     return render_template('home.html', farmers=farmers, good=good)
