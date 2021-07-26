@@ -27,7 +27,7 @@ good = Goods(
     farmers_id = 1,
 )
 good2 = Goods(
-    equipment = "",
+    equipment = "Spade",
     equipmenttype = "",
     vegetables = "Chillies",
     vegenum = 123,

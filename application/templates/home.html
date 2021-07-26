@@ -9,7 +9,7 @@
         td {
             width: 200px;
             text-align: center;
-            border: 1px solid rgb(0, 0, 0);
+            border: 1px solid rgb(36, 38, 156);
             padding: 5px;
          }
    </style>
@@ -37,16 +37,21 @@
                   <td>{{row.name}}</td>
                   <td>{{row.farm}}</td>
                   <td>{{row.age}}</td>
-                  <td>
+                  
                     <!--Repeats through Goods table for all entries-->
                     {% for entry in good %} 
-                        <!--Only displays goods with the same id as farmer-->
                         {% if entry.farmers_id == row.id %}
-                            {{entry.name.upper()}}
-                            <br>
+                        <td>{{entry.equipment}}</td>                  
+                        <td>{{entry.equipmenttype}}</td>
+                        <td>{{entry.vegetables}}</td>
+                        <td>{{entry.vegenum}}</td>
+                        <td>{{entry.fruits}}</td>
+                        <td>{{entry.fruitnum}}</td>
+                         
+                        <br>
                         {% endif %}
                     {% endfor %}
-                  </td>
+                  
                   <!--Adds a link for Update and Delete-->
                   <td><a href="{{ url_for('update', id=row.id) }}"> Update </a></td>
                   <td><a href="{{ url_for('delete', id=row.id) }}"> Delete </a></td>

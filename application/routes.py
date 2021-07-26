@@ -103,10 +103,10 @@ def update(id):
     new = Farmform()
     if new.validate_on_submit():
         
-        new.name=farms.name.data
-        new.farm=farms.farm.data
-        new.age=farms.age.data
-        db.session.add(new)  
+        farms.name=new.name.data
+        farms.farm=new.farm.data
+        farms.age=new.age.data
+        db.session.add(farms)  
         db.session.commit()
 
         equip = new.equipment.data
