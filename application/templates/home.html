@@ -39,18 +39,40 @@
                   <td>{{row.age}}</td>
                   
                     <!--Repeats through Goods table for all entries-->
-                    {% for entry in good %} 
-                        {% if entry.farmers_id == row.id %}
-                        <td>{{entry.equipment}}</td>                  
-                        <td>{{entry.equipmenttype}}</td>
-                        <td>{{entry.vegetables}}</td>
-                        <td>{{entry.vegenum}}</td>
-                        <td>{{entry.fruits}}</td>
-                        <td>{{entry.fruitnum}}</td>
+                    <td>{% for entry in good %} 
+                            {% if entry.farmers_id == row.id %}
+                                {{entry.equipment}} 
+                            {% endif %}
+                        {% endfor %}</td>          
+                    <td>{% for entry in good %} 
+                            {% if entry.farmers_id == row.id %}
+                                {{entry.equipmenttype}} 
+                            {% endif %}
+                        {% endfor %}</td> 
+                        <td>{% for entry in good %} 
+                            {% if entry.farmers_id == row.id %}
+                                {{entry.vegetables}} 
+                            {% endif %}
+                        {% endfor %}</td>
+                        <td>{% for entry in good %} 
+                            {% if entry.farmers_id == row.id %}
+                                {{entry.vegenum}} 
+                            {% endif %}
+                        {% endfor %}</td>
+                        <td>{% for entry in good %} 
+                            {% if entry.farmers_id == row.id %}
+                                {{entry.fruits}} 
+                            {% endif %}
+                        {% endfor %}</td>
+                        <td>{% for entry in good %} 
+                            {% if entry.farmers_id == row.id %}
+                                {{entry.fruitnum}} 
+                            {% endif %}
+                        {% endfor %}</td>
                          
                         <br>
-                        {% endif %}
-                    {% endfor %}
+            
+                    
                   
                   <!--Adds a link for Update and Delete-->
                   <td><a href="{{ url_for('update', id=row.id) }}"> Update </a></td>

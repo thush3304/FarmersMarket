@@ -18,12 +18,8 @@ class TestBase(TestCase):
 
     
     def setUp(self):
-        
-        #Destroys previous database and creates a new one
-        db.drop_all()
+                db.drop_all()
         db.create_all()
-
-        #Creates a Frankendama database entry
         farmer = Farmers(
             name='Test',
             farm='TestFarm',
@@ -31,8 +27,6 @@ class TestBase(TestCase):
         )
 
         db.session.add(farmer)
-
-        #Creates entries in the Company database relating to the Frankendama entry above
         good = Goods(
         equipment = "Tractor",
         equipmenttype = "Vehicle",
@@ -54,14 +48,10 @@ class TestBase(TestCase):
         db.session.add(good)
         db.session.add(good2)
         db.session.commit()
-
-    #Destroys database after running tests
     def tearDown(self):
 
         db.session.remove()
         db.drop_all()
-
-#Tests the user is able to reach each page
 class TestViews(TestBase):
 
     def test_home_get(self):
@@ -75,8 +65,6 @@ class TestViews(TestBase):
     def test_update_get(self):
         response = self.client.get(url_for('update', id=1))
         self.assertEqual(response.status_code, 200)
-
-#Tests reading data from the homepage
 class TestRead(TestBase):
 
     def test_read(self):
@@ -85,8 +73,6 @@ class TestRead(TestBase):
         self.assertIn(b'TestFarm', response.data)
         self.assertIn(b'25', response.data)
         self.assertIn(b'Tractor', response.data)
-
-#Tests the update fucntion of the flask app
 class TestUpdate(TestBase):
 
     def test_update(self):
@@ -100,8 +86,6 @@ class TestUpdate(TestBase):
         )
 
         self.assertIn(b'Jules',response.data)
-
-#Tests the delete function of the flask app
 class TestDelete(TestBase):
 
     def test_delete(self):
